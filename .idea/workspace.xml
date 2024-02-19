@@ -11,6 +11,7 @@
     <option name="defaultAccountId" value="9bec986e-0e5c-4a7b-968e-70ca35dbd2d5" />
   </component>
   <component name="ProjectId" id="2caj8nPaBKtjmK0qOEvAY6PiMkH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -38,8 +39,31 @@
       <option name="presentableId" value="Default" />
       <updated>1708356428430</updated>
       <workItem from="1708356429655" duration="563000" />
-      <workItem from="1708357004642" duration="150000" />
+      <workItem from="1708357004642" duration="479000" />
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
