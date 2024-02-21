@@ -18,6 +18,12 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.32</version>
         </dependency>
+        <!-- https://github.com/remkop/picocli -->
+        <dependency>
+            <groupId>info.picocli</groupId>
+            <artifactId>picocli</artifactId>
+            <version>4.7.5</version>
+        </dependency>
         <!--        <-https://doc.hutool.cn/&ndash;&gt;-->
         <dependency>
             <groupId>cn.hutool</groupId>
@@ -44,5 +50,35 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>generator-basic</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.0</version> <!-- 确保版本号正确 -->
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.xiaozhang.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>

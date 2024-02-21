@@ -29,10 +29,8 @@ public class MainGenerator {
         //生成动态文件
         String template = new File(property, "generator-basic/src/main/resources/templates/mainTemplate.java.ftl").getAbsolutePath();
         String output = new File(
-            property + File.separator + "generator-acm-template-demo/src/com/yupi/acm/MainTemplate.java")
+            outPath + File.separator + "generator-acm-template-demo/src/com/yupi/acm/MainTemplate.java")
             .getAbsolutePath();
-        System.out.println(template);
-        System.out.println(output);
         DynamicGenerator.generation(template,output,model);
 
     }

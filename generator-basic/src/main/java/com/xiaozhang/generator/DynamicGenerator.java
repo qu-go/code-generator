@@ -21,6 +21,14 @@ import java.util.Map;
  */
 public class DynamicGenerator {
 
+    /**
+     *
+     * @param inputPath 模板文件路径
+     * @param outPath 输出的模板文件路径
+     * @param model 动态绑定的数据
+     * @throws IOException
+     * @throws TemplateException
+     */
     public static void generation(String inputPath,String outPath,MainTemplateConfig model) throws IOException, TemplateException {
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_32);
         //解决数字显示的时候出现，号,now it will print 1000000
@@ -38,7 +46,6 @@ public class DynamicGenerator {
         String templateName = new File(inputPath).getName();
         Template temp = cfg.getTemplate(templateName);
         //创建model
-
         Writer out = new FileWriter(outPath);
         temp.process(model, out);
         out.close();
