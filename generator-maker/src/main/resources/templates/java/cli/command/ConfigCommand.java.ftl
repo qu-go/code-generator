@@ -1,14 +1,14 @@
-package com.xiaozhang.maker.cli.command;
+package ${basePackage}.cli.command;
 
 
 import cn.hutool.core.util.ReflectUtil;
-import com.xiaozhang.maker.model.DataModel;
+import ${basePackage}.model.DataModel;
 import picocli.CommandLine.Command;
 
 import java.lang.reflect.Field;
 
 /**
- * @author acal1314
+ * @author ${author}
  * 配置字命令
  */
 @Command(name = "config" ,description = "查看需要传入动态参数",mixinStandardHelpOptions = true)

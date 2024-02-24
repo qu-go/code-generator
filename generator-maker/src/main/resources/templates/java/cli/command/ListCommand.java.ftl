@@ -1,4 +1,4 @@
-package com.xiaozhang.maker.cli.command;
+package ${basePackage}.cli.command;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ArrayUtil;
@@ -8,7 +8,7 @@ import java.io.File;
 import java.util.List;
 
 /**
- * @author xiaozhang
+ * @author ${author}
  * 子命令 获取文件列表
  */
 @CommandLine.Command(name = "list",description = "显示文件目录",mixinStandardHelpOptions = true)

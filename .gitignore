@@ -5,7 +5,9 @@
 ### custom template
 /.idea
 code-generator.iml
+acm-template-pro
 code-generator.iml
+generated
 generator-basic/generator-basic.iml
 generator-maker/generated
 # Log file
