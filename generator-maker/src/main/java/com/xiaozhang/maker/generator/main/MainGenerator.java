@@ -33,6 +33,11 @@ public class MainGenerator {
         String basePackage = meta.getBasePackage();
         String basePackagePath = StrUtil.join("/", StrUtil.split(basePackage,"."));
         String outputJavaPath=outRootPath+File.separator+"src/main/java/"+basePackagePath;
+        //把模板文件生成到本项目下
+        String sourcePath=meta.getFileConfig().getSourceRootPath();
+        String sourceCopyDestPath=outRootPath+File.separator+".source";
+        FileUtil.copy(sourcePath,sourceCopyDestPath,false);
+
         String inputPath;
         String outPath;
         //模板的文件路径输出路径
