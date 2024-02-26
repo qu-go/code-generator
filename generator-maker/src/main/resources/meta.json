@@ -1,5 +1,5 @@
 {
-  "name": "generated",
+  "name": "acm-template-pro-generator",
   "description": "ACM 示例模板生成器",
   "basePackage": "com.yupi",
   "version": "1.0",
