@@ -1,6 +1,6 @@
 package com.xiaozhang.maker.generator.file;
 
-import com.xiaozhang.maker.model.DataModel;
+
 import freemarker.template.TemplateException;
 
 import java.io.File;
@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class FileGenerator {
 
-    public static  void doGenerator(DataModel model) throws TemplateException, IOException {
+    public static  void doGenerator(Object model) throws TemplateException, IOException {
         String property = System.getProperty("user.dir");
         String outPath = new File(property).getParent();
         String inputPath = new File(property, "generator-acm-template-demo").getAbsolutePath();

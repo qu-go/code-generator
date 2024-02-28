@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class DataModel {
 
     private boolean loop;
+    private boolean gitignore;
 
     private String author="作者";
     private String output="Sum==";

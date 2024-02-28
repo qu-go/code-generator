@@ -1,5 +1,6 @@
 package com.xiaozhang.maker.generator.main;
 
+import com.xiaozhang.maker.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.IOException;

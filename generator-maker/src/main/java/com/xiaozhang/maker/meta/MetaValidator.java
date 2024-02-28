@@ -13,6 +13,7 @@ import freemarker.template.utility.StringUtil;
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -41,6 +42,14 @@ public class MetaValidator {
             return;
         }
         for (Meta.ModelConfig.Models model : models) {
+            String groupKey = model.getGroupKey();
+            if (StrUtil.isNotBlank(groupKey)){
+                String allArgsStr = model.getModels().stream()
+                    .map(models1 -> String.format("\"--%s\"", models1.getFieldName()))
+                    .collect(Collectors.joining(","));
+                model.setAllArgsStr(allArgsStr);
+                continue;
+            }
             String fieldName = model.getFieldName();
             if (StrUtil.isBlank(fieldName)) {
                 throw new MetaException("未填写fieldName");
@@ -71,6 +80,10 @@ public class MetaValidator {
             return;
         }
         for (Meta.FileConfig.FileInfo fileInfo : files) {
+            String typeFile = fileInfo.getType();
+            if (FileTypeEnum.GROUP.getValue().equals(typeFile)){
+                continue;
+            }
             String inputPath = fileInfo.getInputPath();
             if (StrUtil.isEmpty(inputPath)) {
                 throw new MetaException("没有填写inputPath");

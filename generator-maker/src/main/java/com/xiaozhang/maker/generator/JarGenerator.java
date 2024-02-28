@@ -32,8 +32,8 @@ public class JarGenerator {
 
     }
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-        doGenerate("F:\\code\\code-generator\\generator-basic");
-    }
+//    public static void main(String[] args) throws IOException, InterruptedException {
+//        doGenerate("F:\\code\\code-generator\\generator-basic");
+//    }
 
 }

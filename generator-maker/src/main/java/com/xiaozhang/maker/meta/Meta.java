@@ -69,6 +69,9 @@ public class Meta {
             private String condition;
             private List<Models> models;
 
+            //拼接所有的参数
+            private String allArgsStr;
+
 
         }
     }

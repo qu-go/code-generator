@@ -6,18 +6,17 @@
 /.idea
 code-generator.iml
 acm-template-pro
-code-generator.iml
 generated
 generator-basic/generator-basic.iml
 generator-basic/.idea
 generator-basic/target
 generator-maker/generated
 generator-maker/generator-maker.iml
-generator-maker/generated
 generator-maker/target
 generator-maker/.idea
 freeMaker-fast-demo/freeMaker-fast-demo.iml
 freeMaker-fast-demo/target
+generator-acm-template-demo
 # Log file
 *.log
 

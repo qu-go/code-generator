@@ -5,6 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+<#macro generateModel indent model>
+    <#if model.description?? || model.fieldName??>
+        /**
+        *${indent}${model.description}
+        */
+    <#if model.fieldName??>
+        public ${model.type} ${model.fieldName} <#if model.defaultValue??>= ${model.defaultValue?c}</#if>;
+    </#if>
+    </#if>
+</#macro>
 /**
  * 数据模板
  */
@@ -14,14 +24,21 @@ import lombok.NoArgsConstructor;
 @Builder
 public class DataModel {
     <#list modelConfig.models as model>
-    <#if model.description?? || model.fieldName??>
-    /**
-     *${model.description}
-    */
+    <#if model.groupKey??>
+
+        public ${model.type} ${model.groupKey}=new ${model.type}();
+
+        @Data
+        public static class ${model.type} {
+        <#list model.models as model>
+            <@generateModel indent="   " model=model/>
+        </#list>
+
+        }
+        <#else >
+        <@generateModel indent="   " model=model/>
     </#if>
-    <#if model.fieldName??>
-    private ${model.type} ${model.fieldName} <#if model.defaultValue??>= ${model.defaultValue?c}</#if>;
-    </#if>
+
     </#list>
 
 }

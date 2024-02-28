@@ -16,10 +16,14 @@
 > generator generate -l -a -o
 
 <#list modelConfig.models as model>
+<#if model.groupKey??>
+    <#else >
 ## 参数说明
 1）${model.fieldName}
 类型：${model.type}
 描述：${model.description}
 默认值：${model.defaultValue?c}
-缩写：${model.abbr}
+缩写：${model.abbr!}
+</#if>
+
 </#list>
