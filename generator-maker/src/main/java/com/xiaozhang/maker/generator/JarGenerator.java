@@ -1,7 +1,6 @@
 package com.xiaozhang.maker.generator;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 
 /**
  * 打jar包的模板

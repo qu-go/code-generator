@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "mate": {
+    "name": "template-demo",
+    "description": "代码生成器"
+  },
+  "originProjectPath": "../../../springboot-init"
+
+}

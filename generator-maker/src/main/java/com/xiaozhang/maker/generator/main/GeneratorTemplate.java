@@ -7,7 +7,7 @@ import com.xiaozhang.maker.generator.JarGenerator;
 import com.xiaozhang.maker.generator.ScriptGenerator;
 import com.xiaozhang.maker.generator.file.DynamicFileGenerator;
 import com.xiaozhang.maker.meta.Meta;
-import com.xiaozhang.maker.meta.*;
+import com.xiaozhang.maker.meta.MetaManger;
 import freemarker.template.TemplateException;
 
 import java.io.File;

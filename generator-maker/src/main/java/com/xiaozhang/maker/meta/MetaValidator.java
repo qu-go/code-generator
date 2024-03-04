@@ -3,17 +3,14 @@ package com.xiaozhang.maker.meta;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.stream.CollectorUtil;
 import cn.hutool.core.util.StrUtil;
 import com.xiaozhang.maker.meta.enums.FileGenerateTypeEnum;
 import com.xiaozhang.maker.meta.enums.FileTypeEnum;
 import com.xiaozhang.maker.meta.enums.ModelTypeEnum;
-import freemarker.template.utility.StringUtil;
 
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
